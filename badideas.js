@@ -136,6 +136,12 @@ var words = {
     "generating",
     "tracking"
   ]
+  helpingverb: [
+    "easing",
+    "facilitating",
+    "expiditing",
+    "monitizing"
+  ]
 };
 
 var templates = [
@@ -144,6 +150,7 @@ var templates = [
   "A {platform} in {language} for {verb} {noun} designed by {market}",
   "The next {language}",
   "The next big {platform}"
+  "A {platform} for {market} {helpingverb} the {verb} of {noun}"
 ];
 
 function random_item(array) {
