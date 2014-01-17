@@ -53,9 +53,10 @@ var words = {
     "GUI",
     "WYSIWYG editor",
     "Widget",
-    "Wikipedia clone",
-    "Facebook clone",
-    "Distributed cyrptocurrency"
+    "Wiki",
+    "Distributed cyrptocurrency",
+    "website",
+    "social media platform"
   ],
   market: [
     "teenagers",
@@ -148,23 +149,53 @@ var templates = [
   "A {platform} for {verb} {noun} designed by {market}, for {market}",
   "A {platform} in {language} for {verb} {noun} designed by {market}",
   "The next {language}",
-  "The next big {platform}"
-  "A {platform} for {market} {helpingverb} the {verb} of {noun}"
+  "The next big {platform}",
+  "A {platform} for {market} {helpingverb} the {verb} of {noun}",
+  "A {noun} {verb} {platform}"
 ];
 
-function random_item(array) {
-  return array[Math.floor(Math.random() * array.length)];
+function random_item(array, random) {
+  return array[Math.floor((random / 10000) * array.length)];
 }
 
-function generate_bad_idea() {
-  var template = random_item(templates);
+function random_numbers() {
+  var numbers = [];
+  for (var i=0; i<7; i++) {
+    numbers.push((Math.random() * 10000) | 0);
+  }
+
+  return numbers;
+}
+
+function generate_bad_idea(randoms) {
+  var i = 1;
+  var template = random_item(templates, randoms[0]);
 
   return template.replace(/\{([a-z]+)\}/g, function(m, k) {
-    return k in words ? random_item(words[k]) : m;
+    return k in words ? random_item(words[k], randoms[i++]) : m;
   });
 }
 
 function new_bad_idea() {
-  document.getElementById('bad-idea').innerHTML = generate_bad_idea();
+  var randoms = random_numbers();
+  var bad_idea = generate_bad_idea(randoms);
+  location.hash = randoms.join(',');
+  document.getElementById('bad-idea').innerHTML = bad_idea;
 }
-new_bad_idea();
+
+if (location.hash === '')
+  new_bad_idea();
+else
+  read_hash();
+
+function read_hash() {
+  var randoms = location.hash.substring(1).split(',');
+  for (var i=0; i<randoms.length; i++) {
+    randoms[i] = parseInt(randoms[i]);
+  }
+  document.getElementById('bad-idea').innerHTML = generate_bad_idea(randoms);
+}
+
+window.addEventListener('hashchange', function(e) {
+  read_hash();
+});

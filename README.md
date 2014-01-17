@@ -15,3 +15,8 @@ Examples
 > A WYSIWYG editor in Ruby for browsing drugs designed by retirees
 
 > A Hacker News bot for socially disadvantaged people facilitating the buying of hard drugs
+
+> A web app for dorks facilitating the croudsourcing of bad ideas
+
+> A platform for avoiding bad ideas designed by geeks, for students
+
