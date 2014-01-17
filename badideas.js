@@ -51,7 +51,6 @@ var words = {
     "domain specific langauge",
     "DOS program",
     "GUI",
-    "Gooey",
     "WYSIWYG editor",
     "Widget",
     "Wikipedia clone",
@@ -135,7 +134,7 @@ var words = {
     "avoiding",
     "generating",
     "tracking"
-  ]
+  ],
   helpingverb: [
     "easing",
     "facilitating",
@@ -146,7 +145,7 @@ var words = {
 
 var templates = [
   "A {platform} in {language} for {verb} {noun} designed for {market}",
-  "A {platform} for {verb} {noun} designed for {market}, by {market}",
+  "A {platform} for {verb} {noun} designed by {market}, for {market}",
   "A {platform} in {language} for {verb} {noun} designed by {market}",
   "The next {language}",
   "The next big {platform}"
