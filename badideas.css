@@ -1,0 +1,23 @@
+* {
+	text-align: center;
+	font-family: "Helvetic Neue", Helvetica, Arial, sans-serif;
+}
+
+h1:before {
+	content: '~ ';
+}
+h1:after {
+	content: ' ~';
+}
+
+h4 {
+	text-align: left;
+	padding-left: 50px;
+	margin-bottom: -10px;
+}
+
+button {
+	font-size: 20px;
+	background-color: #fcc;
+	border-radius: 10px;
+}
