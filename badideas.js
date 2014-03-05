@@ -56,7 +56,8 @@ var words = {
     "Wiki",
     "Distributed cyrptocurrency",
     "website",
-    "social media platform"
+    "social media platform",
+    "IRC"
   ],
   market: [
     "teenagers",
