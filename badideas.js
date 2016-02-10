@@ -125,7 +125,7 @@ var words = {
     "creating",
     "browsing",
     "aggregating",
-    "croudsourcing",
+    "crowdsourcing",
     "connecting with",
     "selling",
     "buying",
