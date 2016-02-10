@@ -16,7 +16,7 @@ Examples
 
 > A Hacker News bot for socially disadvantaged people facilitating the buying of hard drugs
 
-> A web app for dorks facilitating the croudsourcing of bad ideas
+> A web app for dorks facilitating the crowdsourcing of bad ideas
 
 > A platform for avoiding bad ideas designed by geeks, for students
 
