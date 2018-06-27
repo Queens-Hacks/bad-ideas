@@ -20,3 +20,4 @@ Examples
 
 > A platform for avoiding bad ideas designed by geeks, for students
 
+> A Facebook app for chatting with cars designed by socially disadvantaged people, for dorks
